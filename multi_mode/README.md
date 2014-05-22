@@ -17,15 +17,21 @@ Have you ever wanted a generic, simple, easy to configure, flexible makefile for
 ## QuickStart
 
 Usage is simple. Create a file named “Makefile” alongside your source code. In the Makefile, specify your project’s settings (by defining some variables that describe it; documentation follows) and then include edam.mk at the end. It couldn’t be simpler.
-
-Here is an example Makefile for a test program:
+First, cp edam.mk to home dir for sharing with all project:
+```
+mkdir -p ~/script
+cp edam.mk ~/script/.
+```
+Then create Makefile in our project dir:
 ```
 TARGET = my_program
-SOURCES = main.cc foo.cc
+SOURCES = main.c foo.c
+IncDirs =
+LibDirs =
 LIBRARIES = bar
-include ~/src/edam.mk
+include ~/script/edam.mk
 ```
-As you can see from the include line at the end, I keep the general-purpose makefile at ~/src/edam.mk. This means I can easily replace it globally when bugs are fixed and improvements made. You can just as easily keep a separate copy of edam.mk with each project’s source code though, if that is preferred.
+As you can see from the include line at the end, I keep the general-purpose makefile at ~/script/edam.mk. This means I can easily replace it globally when bugs are fixed and improvements made. You can just as easily keep a separate copy of edam.mk with each project’s source code though, if that is preferred.
 
 ## Target Settings
 
