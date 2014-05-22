@@ -17,6 +17,7 @@ Have you ever wanted a generic, simple, easy to configure, flexible makefile for
 ## QuickStart
 
 Usage is simple. Create a file named “Makefile” alongside your source code. In the Makefile, specify your project’s settings (by defining some variables that describe it; documentation follows) and then include edam.mk at the end. It couldn’t be simpler.
+
 First, cp edam.mk to home dir for sharing with all project:
 ```
 mkdir -p ~/script
